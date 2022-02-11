@@ -7,7 +7,7 @@ namespace Bb.Storages.ConfigurationProviders.SqlServer
     public static class SqlServerConfigurationBuilderExtensions
     {
      
-        public static SqlServerConfigurationSource GetSqlServerProvider(BaseConfiguration configurationConnexion)
+        public static SqlServerConfigurationSource GetSqlServerProvider(ProviderSqlServerBaseConfiguration configurationConnexion)
         {
             var dataAccess = new SqlServerConfigurationDataAccess(configurationConnexion);
             var source = new SqlServerConfigurationSource(dataAccess, configurationConnexion.RefreshInterval);

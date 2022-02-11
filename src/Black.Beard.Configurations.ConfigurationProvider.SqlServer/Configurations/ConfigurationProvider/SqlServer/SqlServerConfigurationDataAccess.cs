@@ -8,7 +8,7 @@ namespace Bb.Storages.ConfigurationProviders.SqlServer
     public class SqlServerConfigurationDataAccess : IDisposable
     {
 
-        public SqlServerConfigurationDataAccess(BaseConfiguration connection)
+        public SqlServerConfigurationDataAccess(ProviderSqlServerBaseConfiguration connection)
         {
             this._tableName = connection.TableName;
             var cnx = connection.GetConnection() ?? throw new NullReferenceException(nameof(connection));

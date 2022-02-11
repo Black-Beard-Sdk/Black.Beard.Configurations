@@ -7,13 +7,13 @@ using System.ComponentModel;
 namespace Bb.Storages.ConfigurationProviders.SqlServer
 {
 
-    [ExposeClass(ConstantsCore.Initialization, LifeCycle = IocScopeEnum.Transiant)]
+    //[ExposeClass(ConstantsCore.Initialization, LifeCycle = IocScopeEnum.Transiant)]
     [Configuration(ConfigurationKey = "TranslationsConfiguration", TypeSerialisation = ConfigurationAttribute.TypeSerialisationToJson)]
-    [TranslationKey(BaseConfiguration.MenuList, "p:TypeName,k:Configuration,l:en-us,d:Manage configuration")]
-    public class BaseConfiguration
+    [TranslationKey(ProviderSqlServerBaseConfiguration.MenuList, "p:TypeName,k:Configuration,l:en-us,d:Manage configuration")]
+    public class ProviderSqlServerBaseConfiguration
     {
 
-        public BaseConfiguration(ConnectionStringSetting initialeConnectionStringSetting)
+        public ProviderSqlServerBaseConfiguration(ConnectionStringSetting initialeConnectionStringSetting)
         {
             this._settings = initialeConnectionStringSetting;
         }
