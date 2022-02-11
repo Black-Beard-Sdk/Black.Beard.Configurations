@@ -5,7 +5,7 @@
 
         public ConfigurationSettings()
         {
-            
+
         }
 
         public string SectionName { get; internal set; }
@@ -17,6 +17,15 @@
         public int Version { get; internal set; }
 
         public string Value { get; internal set; }
+
+        public void SetValue(string value)
+        {
+            if (this.Value != value)
+            {
+                this.Value = value;
+                this.IsDirty = true;
+            }
+        }
 
         public DateTimeOffset? CreationDtm { get; internal set; }
 
