@@ -1,2 +1,2 @@
 # Black.Beard.Configurations
-Manage configuration loading and save in SqlServer
+Manage configuration loading and save with SqlServer
