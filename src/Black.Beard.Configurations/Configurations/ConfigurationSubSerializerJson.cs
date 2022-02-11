@@ -5,7 +5,6 @@ namespace Bb.Configurations
 {
 
 
-    // [ExposeClass(ConstantsCore.Initialization, ExposedType = typeof(ConfigurationJSonSerializer))]
     public class ConfigurationSubSerializerJson : ConfigurationSubSerializer
     {
 

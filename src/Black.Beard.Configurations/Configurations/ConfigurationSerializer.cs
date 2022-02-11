@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 namespace Bb.Configurations
 {
 
-    // [ExposeClass(ConstantsCore.Initialization, ExposedType = typeof(ConfigurationSerializer), LifeCycle = IocScopeEnum.Singleton)]
     public class ConfigurationSerializer
     {
 

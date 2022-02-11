@@ -3,7 +3,6 @@
 namespace Bb.Configurations
 {
 
-    // [ExposeClass(ConstantsCore.Initialization, ExposedType = typeof(ConfigurationSectionSerializer))]
     public class ConfigurationSubSerializerSection : ConfigurationSubSerializer
     {
 
