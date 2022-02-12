@@ -179,11 +179,11 @@ namespace Bb.Storages.ConfigurationProviders.SqlServer
             return datas;
         }
 
-        public bool CreateTables()
-        {
-            var results = Sql.ExecuteNonQuery(GetSql(_sql_tables_create));
-            return results.Success;
-        }
+        //public bool CreateTables()
+        //{
+        //    var results = Sql.ExecuteNonQuery(GetSql(_sql_tables_create));
+        //    return results.Success;
+        //}
 
         private string GetSql(string sql)
         {
@@ -212,7 +212,7 @@ VALUES (@sectionName, @context, @kind, @version, @value, SYSDATETIMEOFFSET())
 ";
         private string _sql_history_Update = "UPDATE [dbo].[%TableName%] SET [Value] = @value, [LastUpdate] = SYSDATETIMEOFFSET(), [Version] = @version + 1  WHERE [SectionName]=@sectionName AND [Version] = @version";
         private string _sql_history_selectAll = "SELECT [SectionName], [Context], [Kind], [Version], [Value], [CreationDtm], [LastUpdate] FROM [%TableName%] WITH (NOLOCK)";
-        private string _sql_tables_create =
+        public const string Sql_tables_create =
  @"
 
 SET ANSI_NULLS ON
